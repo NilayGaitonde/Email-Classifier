@@ -1,11 +1,31 @@
-# Email-Classifier
-Email is an efficient and widely popular way of communication between many professionals. Email management is an important and growing problem for individuals and organizations. The blind posting of unsolicited email messages, known as spam, is an example of misuse. Spam is commonly defined as the sending of unsolicited bulk email - that is, email that was not asked for by multiple recipients. A further common definition of a spam restricts it to unsolicited commercial email, a definition that does not consider non-commercial solicitations such as political or religious pitches, even if unsolicited, as spam. Email was by far the most common form of spamming on the internet. 
-The task of text classification, which encompasses email classification as well, poses difficulties because of the abundance of diverse variables in the dataset and the volume of documents.
-Due to the huge and varied number of features in the dataset and the enormous number of documents, text classification—including email classification—presents difficulties.
-Due to the vast number of attributes that make most documents identical, there was limited applicability of existing classification approaches in these datasets.
+# Email Classifier
 
-Classification algorithms like Naive Bayes, Neural Networks and Support Vector Machine are widely used for such text classification tasks because of the high accuracy they give. The problem of spam filtering is not a new one and there are already a dozen different approaches to the problem that have been implemented. The problem was more specific to areas like Artificial intelligence and Machine Learning. 
+Email is an efficient and widely used communication method between professionals. However, unsolicited bulk emails, known as spam, clutter inboxes and cause lost productivity. This project builds a classifier to identify and filter spam emails. 
 
-Giving our user more insight into their email information we have also used LDA or Latent Dirichlet Allocation which is a topic modelling algorithm that checks for the probability of two words coming together.
+## Problem and Key Features
 
-With the model we have a working accuracy of **97%**
+Spam email filtering is a common machine learning task. Classification is challenging due to the high dimension feature space of text data and large volume of documents. This project implements a robust voting ensemble classifier and topic modeling to categorize emails.
+
+Key features:
+
+- Data preprocessing including tokenization, stopword removal
+- Hyperparameter tuning using RandomizedSearchCV 
+- VotingClassifier ensemble of Naive Bayes, SVM, Neural Net models
+- Latent Dirichlet Allocation (LDA) topic modeling to categorize non-spam
+- Evaluation metrics such as confusion matrix and classification report
+
+## Usage 
+
+The implementation is an easy to run Jupyter notebook:
+
+1. Download notebook and encoded email dataset
+2. Ensure key libraries (NumPy, SciKit-Learn) are installed 
+3. Run notebook cells end-to-end to preprocess, train, and evaluate model
+
+
+## Performance
+
+The current model achieves **97% accuracy** on the test set. This could likely be improved further by tuning model hyperparameters and the number of topics for LDA.
+
+## Credits
+This project was made with [Niharika Bhende](), [Riddhi Dumre](https://github.com/RiddhiDumre/RiddhiDumre) and [Vishesh Giyanani](https://github.com/Vishesh-Giyanani)
